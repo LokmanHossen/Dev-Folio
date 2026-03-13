@@ -140,7 +140,7 @@ export default function App() {
     <div className="min-h-screen bg-[#0a0a0a] text-zinc-400 font-sans selection:bg-emerald-500/30 selection:text-emerald-200">
       {/* Top Navigation Bar */}
       <nav className="fixed top-0 left-0 w-full border-b border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md z-50">
-        <div className="max-w-screen-2xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <motion.div 
             className="flex items-center gap-3 cursor-pointer group"
             whileHover="hover"
@@ -233,7 +233,7 @@ export default function App() {
         </AnimatePresence>
       </nav>
 
-      <main className="max-w-screen-2xl mx-auto px-6 pt-32 pb-24">
+      <main className="max-w-7xl mx-auto px-6 pt-32 pb-24">
         {/* Hero Section */}
         <header id="home" className="mb-32 scroll-mt-24 relative">
           {/* Background Ambient Glow */}
