@@ -43,11 +43,23 @@ export const RESUME_DATA = {
     { category: "Tools", items: ["Git", "GitHub", "Android Studio", "VS Code", "Postman"], icon: Wrench }
   ],
   experience: [
+        {
+      company: "One Direction Companies Limited",
+      role: "Flutter Developer (Sr. Principal Officer)",
+      period: "Apr. 2026 – Present",
+      location: "Block-I, 5th Avenue, Bashundhara R/A, Vatara, Dhaka-1229",
+      points: [
+        "Developed and maintained mobile applications using Flutter and Dart, handling UI/UX, state management, API integration, and performance optimization while ensuring clean, scalable, and maintainable code.",
+        "Collaborated with cross-functional teams to design and implement new features, troubleshoot issues, and optimize app performance for a seamless user experience.",
+        "Managed the complete mobile app lifecycle, including development, testing, deployment, and maintenance on both Google Play and Apple App Store.",
+        "Implemented modern UI/UX designs using Flutter's widget system and integrated third-party libraries to enhance app functionality."
+      ]
+    },
     {
-      company: "Betopia Group(SM Technology)",
+      company: "SM Technology (Betopia Group)",
       role: "Flutter Developer (Android & iOS)",
-      period: "Jan. 2025 – Present",
-      location: "Dhaka, Bangladesh",
+      period: "Jan. 2025 – mar. 2026",
+      location: "Banasree, Rampura,Dhaka, Bangladesh",
       points: [
         "Contributing to the development of cross-platform mobile applications using Flutter and Dart for both Android and iOS.",
         "Integrating RESTful APIs, Firebase services (Authentication, Firestore, Storage), WebSocket, and Socket.IO for real-time features.",
@@ -60,7 +72,7 @@ export const RESUME_DATA = {
     {
       name: "Colizen – Courier Transport",
       description: "A comprehensive mobile solution for community engagement and management in the courier industry.",
-      tech: ["Flutter", "Dart", "Firebase"],
+      tech: ["Flutter", "Dart","GetX", "Rest API", "Python", "mongoDB"],
       thumbnail: "/assets/colizen_app.png",
       links: [
         { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.colizen.josi" }
@@ -69,7 +81,7 @@ export const RESUME_DATA = {
     {
       name: "SandLink Marketplace",
       description: "A robust marketplace application connecting buyers and sellers in the construction industry.",
-      tech: ["Flutter", "Rest API", "GetX"],
+      tech: ["Flutter","Dart", "Rest API", "GetX", "Node.js", "MySQL"],
       thumbnail: "/assets/sandlink_app.png",
       links: [
         { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.sandlinkmarketplace.sandlink" }
@@ -78,7 +90,7 @@ export const RESUME_DATA = {
     {
       name: "Riyaada – Sports Marketplace",
       description: "Innovative platform designed for business growth and networking in the sports sector.",
-      tech: ["Flutter", "Provider", "Clean Architecture"],
+      tech: ["Flutter", "Dart", "Riverpod", "Clean Architecture", "Rest API","Node.js", "MySQL"],
       thumbnail: "/assets/riyaada_app.png",
       links: [
         { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.riyaada.app" },
@@ -88,7 +100,7 @@ export const RESUME_DATA = {
     {
       name: "AMC Connect",
       description: "A specialized application for connecting professionals and managing industry-specific workflows.",
-      tech: ["Flutter", "Dart", "Firebase"],
+      tech: ["Flutter", "Dart", "Riverpod", "REST API", "Node.js", "MySQL"],
       thumbnail: "/assets/amc_connect.png",
       links: [
         { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.amc.connect" }
