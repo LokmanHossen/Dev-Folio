@@ -33,7 +33,7 @@ export const RESUME_DATA = {
     leetcode: "https://leetcode.com/u/MdLokmanHossen",
     cv: "https://drive.google.com/file/d/115afZDKLkHznRmYRMXMRYOzf20iBdJUR/view?usp=sharing"
   },
-  objective: "Flutter Developer with 1+ year of professional experience at Betopia Group, developing cross-platform mobile applications for Android and iOS using Flutter and Dart. Skilled in integrating REST APIs, Firebase services, Google Maps, and WebSocket to build scalable and high-performance applications. Experienced in implementing modern UI/UX designs, managing state with GetX, Riverpod, and Bloc, and handling the complete mobile app lifecycle including App Store and Google Play deployments. Passionate about writing clean, maintainable code and delivering optimized user experiences",
+  objective: "Flutter Developer with 1+ year of professional experience, developing cross-platform mobile applications for Android and iOS using Flutter and Dart. Skilled in integrating REST APIs, Firebase services, Google Maps, and WebSocket to build scalable and high-performance applications. Experienced in implementing modern UI/UX designs, managing state with GetX, Riverpod, and Bloc, and handling the complete mobile app lifecycle including App Store and Google Play deployments. Passionate about writing clean, maintainable code and delivering optimized user experiences",
   skills: [
     { category: "Languages", items: ["Dart", "Python", "JavaScript", "C", "C++"], icon: Code2 },
     { category: "Frontend", items: ["Flutter", "Dart Features", "WebSocket", "Socket.IO"], icon: Smartphone },
