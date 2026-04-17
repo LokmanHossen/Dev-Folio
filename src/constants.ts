@@ -31,7 +31,7 @@ export const RESUME_DATA = {
     linkedin: "https://linkedin.com/in/lokman05",
     github: "https://github.com/LokmanHossen",
     leetcode: "https://leetcode.com/u/MdLokmanHossen",
-    cv: "https://drive.google.com/file/d/115afZDKLkHznRmYRMXMRYOzf20iBdJUR/view?usp=sharing"
+    cv: "https://drive.google.com/file/d/1rF3O3193qM-w_h4Vpsc1MhzhFCY4BiV2/view?usp=sharing"
   },
   objective: "Flutter Developer with 1+ year of professional experience, developing cross-platform mobile applications for Android and iOS using Flutter and Dart. Skilled in integrating REST APIs, Firebase services, Google Maps, and WebSocket to build scalable and high-performance applications. Experienced in implementing modern UI/UX designs, managing state with GetX, Riverpod, and Bloc, and handling the complete mobile app lifecycle including App Store and Google Play deployments. Passionate about writing clean, maintainable code and delivering optimized user experiences",
   skills: [
