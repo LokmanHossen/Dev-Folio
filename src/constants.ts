@@ -1,16 +1,16 @@
-import { 
-  Github, 
-  Linkedin, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ExternalLink, 
-  Code2, 
-  Smartphone, 
-  Database, 
-  Cloud, 
-  Wrench, 
-  GraduationCap, 
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+  ExternalLink,
+  Code2,
+  Smartphone,
+  Database,
+  Cloud,
+  Wrench,
+  GraduationCap,
   Award,
   Briefcase,
   Layers,
@@ -33,9 +33,9 @@ export const RESUME_DATA = {
     leetcode: "https://leetcode.com/u/MdLokmanHossen",
     cv: "https://drive.google.com/file/d/1rF3O3193qM-w_h4Vpsc1MhzhFCY4BiV2/view?usp=sharing"
   },
-  objective: "Flutter Developer with 1+ year of professional experience, developing cross-platform mobile applications for Android and iOS using Flutter and Dart. Skilled in integrating REST APIs, Firebase services, Google Maps, and WebSocket to build scalable and high-performance applications. Experienced in implementing modern UI/UX designs, managing state with GetX, Riverpod, and Bloc, and handling the complete mobile app lifecycle including App Store and Google Play deployments. Passionate about writing clean, maintainable code and delivering optimized user experiences",
+  objective: "Flutter Developer with 1.5+ year of professional experience, developing cross-platform mobile applications for Android and iOS using Flutter and Dart. Skilled in integrating REST APIs, Firebase services, Google Maps, and WebSocket to build scalable and high-performance applications. Experienced in implementing modern UI/UX designs, managing state with GetX, Riverpod, and Bloc, and handling the complete mobile app lifecycle including App Store and Google Play deployments. Passionate about writing clean, maintainable code and delivering optimized user experiences",
   skills: [
-    { category: "Languages", items: ["Dart", "Python", "JavaScript", "C", "C++"], icon: Code2 },
+    { category: "Languages", items: ["Dart", "Python", "C", "C++"], icon: Code2 },
     { category: "Frontend", items: ["Flutter", "Dart Features", "WebSocket", "Socket.IO"], icon: Smartphone },
     { category: "Backend / DB", items: ["Firebase", "RESTful APIs", "Hive", "SQLite", "MySQL"], icon: Database },
     { category: "State Management", items: ["GetX", "Provider", "Riverpod", "Bloc"], icon: Layers },
@@ -43,22 +43,23 @@ export const RESUME_DATA = {
     { category: "Tools", items: ["Git", "GitHub", "Android Studio", "VS Code", "Postman"], icon: Wrench }
   ],
   experience: [
-        {
-      company: "One Direction Companies Limited",
-      role: "Flutter Developer (Sr. Principal Officer)",
-      period: "Apr. 2026 – Present",
-      location: "Block-I, 5th Avenue, Bashundhara R/A, Vatara, Dhaka-1229",
-      points: [
-        "Developed and maintained mobile applications using Flutter and Dart, handling UI/UX, state management, API integration, and performance optimization while ensuring clean, scalable, and maintainable code.",
-        "Collaborated with cross-functional teams to design and implement new features, troubleshoot issues, and optimize app performance for a seamless user experience.",
-        "Managed the complete mobile app lifecycle, including development, testing, deployment, and maintenance on both Google Play and Apple App Store.",
-        "Implemented modern UI/UX designs using Flutter's widget system and integrated third-party libraries to enhance app functionality."
-      ]
-    },
+    //     {
+    //   company: "One Direction Companies Limited",
+    //   role: "Flutter Developer (Sr. Principal Officer)",
+    //   period: "Apr. 2026 – Present",
+    //   location: "Block-I, 5th Avenue, Bashundhara R/A, Vatara, Dhaka-1229",
+    //   points: [
+    //     "Developed and maintained mobile applications using Flutter and Dart, handling UI/UX, state management, API integration, and performance optimization while ensuring clean, scalable, and maintainable code.",
+    //     "Collaborated with cross-functional teams to design and implement new features, troubleshoot issues, and optimize app performance for a seamless user experience.",
+    //     "Managed the complete mobile app lifecycle, including development, testing, deployment, and maintenance on both Google Play and Apple App Store.",
+    //     "Implemented modern UI/UX designs using Flutter's widget system and integrated third-party libraries to enhance app functionality."
+    //   ]
+    // },
     {
       company: "SM Technology (Betopia Group)",
       role: "Flutter Developer (Android & iOS)",
-      period: "Jan. 2025 – mar. 2026",
+      // period: "Jan. 2025 – mar. 2026",
+      period: "Jan. 2025 – present",
       location: "Banasree, Rampura,Dhaka, Bangladesh",
       points: [
         "Contributing to the development of cross-platform mobile applications using Flutter and Dart for both Android and iOS.",
@@ -72,7 +73,7 @@ export const RESUME_DATA = {
     {
       name: "Colizen – Courier Transport",
       description: "A comprehensive mobile solution for community engagement and management in the courier industry.",
-      tech: ["Flutter", "Dart","GetX", "Rest API", "Python", "mongoDB"],
+      tech: ["Flutter", "Dart", "GetX", "Rest API", "Python", "mongoDB"],
       thumbnail: "/assets/colizen_app.png",
       links: [
         { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.colizen.josi" }
@@ -81,7 +82,7 @@ export const RESUME_DATA = {
     {
       name: "SandLink Marketplace",
       description: "A robust marketplace application connecting buyers and sellers in the construction industry.",
-      tech: ["Flutter","Dart", "Rest API", "GetX", "Node.js", "MySQL"],
+      tech: ["Flutter", "Dart", "Rest API", "GetX", "Node.js", "MySQL"],
       thumbnail: "/assets/sandlink_app.png",
       links: [
         { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.sandlinkmarketplace.sandlink" }
@@ -90,7 +91,7 @@ export const RESUME_DATA = {
     {
       name: "Riyaada – Sports Marketplace",
       description: "Innovative platform designed for business growth and networking in the sports sector.",
-      tech: ["Flutter", "Dart", "Riverpod", "Clean Architecture", "Rest API","Node.js", "MySQL"],
+      tech: ["Flutter", "Dart", "Riverpod", "Clean Architecture", "Rest API", "Node.js", "MySQL"],
       thumbnail: "/assets/riyaada_app.png",
       links: [
         { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.riyaada.app" },
@@ -156,18 +157,18 @@ export const RESUME_DATA = {
     }
   ],
   certifications: [
-    { 
-      name: "Flutter Advanced Course - Clean Architecture with MVVM", 
+    {
+      name: "Flutter Advanced Course - Clean Architecture with MVVM",
       issuer: "Udemy",
       link: "https://www.udemy.com/certificate/UC-85f11f83-518a-47a2-8bff-6a818e07efa7/"
     },
-    { 
-      name: "Flutter Animations From Zero to Hero", 
+    {
+      name: "Flutter Animations From Zero to Hero",
       issuer: "Udemy",
       link: "https://www.udemy.com/certificate/UC-2d185e90-4316-4c0a-ad83-33245b8231de/"
     },
-    { 
-      name: "Flutter Basic Course", 
+    {
+      name: "Flutter Basic Course",
       issuer: "TTC, Pabna",
       link: "https://drive.google.com/file/d/128QSr802NfQFXY-6IqZDEqPzcEPXICqd/view"
     }
