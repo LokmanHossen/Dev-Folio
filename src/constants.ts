@@ -43,23 +43,34 @@ export const RESUME_DATA = {
     { category: "Tools", items: ["Git", "GitHub", "Android Studio", "VS Code", "Postman"], icon: Wrench }
   ],
   experience: [
-    //     {
-    //   company: "One Direction Companies Limited",
-    //   role: "Flutter Developer (Sr. Principal Officer)",
-    //   period: "Apr. 2026 – Present",
-    //   location: "Block-I, 5th Avenue, Bashundhara R/A, Vatara, Dhaka-1229",
-    //   points: [
-    //     "Developed and maintained mobile applications using Flutter and Dart, handling UI/UX, state management, API integration, and performance optimization while ensuring clean, scalable, and maintainable code.",
-    //     "Collaborated with cross-functional teams to design and implement new features, troubleshoot issues, and optimize app performance for a seamless user experience.",
-    //     "Managed the complete mobile app lifecycle, including development, testing, deployment, and maintenance on both Google Play and Apple App Store.",
-    //     "Implemented modern UI/UX designs using Flutter's widget system and integrated third-party libraries to enhance app functionality."
-    //   ]
-    // },
+    {
+      company: "Stockmate Asset Management Limited",
+      role: "Flutter Developer (Asst. Sr. Executive Officer)",
+      period: "Aug. 2026 – Present",
+      location: "Block-I, 5th Avenue, Bashundhara R/A, Vatara, Dhaka-1229",
+      points: [
+        "Building the AgroTech Management System, a comprehensive cattle management application to track milk, meat, and other agricultural products.",
+        "Managing inventory, monitoring production records, and generating financial reports for business analysis.",
+        "Driving feature roadmap, mentoring junior developers, and ensuring scalable architecture and reliable deployments."
+      ]
+    },
+    {
+      company: "Stockmate Asset Management Limited",
+      role: "Flutter Developer (Sr. Principal Officer)",
+      period: "Mar. 2026 – Aug. 2026",
+      location: "Block-I, 5th Avenue, Bashundhara R/A, Vatara, Dhaka-1229",
+      points: [
+        "Led feature development and performance optimizations for company mobile apps using Flutter and Dart.",
+        "Collaborated with cross-functional teams to design and implement new features and troubleshoot production issues.",
+        "Maintained code quality, wrote unit/integration tests, and supported app releases to Google Play and Apple App Store."
+      ]
+    },
+
     {
       company: "SM Technology (Betopia Group)",
       role: "Flutter Developer (Android & iOS)",
-      // period: "Jan. 2025 – mar. 2026",
-      period: "Jan. 2025 – present",
+      period: "Jan. 2025 – mar. 2026",
+      // period: "Jan. 2025 – present",
       location: "Banasree, Rampura,Dhaka, Bangladesh",
       points: [
         "Contributing to the development of cross-platform mobile applications using Flutter and Dart for both Android and iOS.",

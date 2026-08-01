@@ -6,19 +6,19 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import emailjs from '@emailjs/browser';
-import { 
-  Github, 
-  Linkedin, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ExternalLink, 
-  Code2, 
-  Smartphone, 
-  Database, 
-  Cloud, 
-  Wrench, 
-  GraduationCap, 
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+  ExternalLink,
+  Code2,
+  Smartphone,
+  Database,
+  Cloud,
+  Wrench,
+  GraduationCap,
   Award,
   Briefcase,
   Terminal,
@@ -40,7 +40,7 @@ function cn(...inputs: ClassValue[]) {
 }
 
 const Section = ({ title, icon: Icon, children, id }: { title: string, icon: any, children: React.ReactNode, id?: string }) => (
-  <motion.section 
+  <motion.section
     id={id}
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -87,7 +87,7 @@ export default function App() {
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
-    
+
     const sections = navLinks.map(link => link.href.replace('#', ''));
     sections.forEach((id) => {
       const element = document.getElementById(id);
@@ -101,7 +101,7 @@ export default function App() {
     e.preventDefault();
     setFormStatus('sending');
     const formData = e.currentTarget;
-    
+
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_ga7y0bm';
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_f4szmo9';
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'cyIKXF1NnyGHV-smz';
@@ -130,7 +130,7 @@ export default function App() {
       console.error('Submission error:', error);
       setFormStatus('idle');
     }
-    
+
     if (formStatus === 'success') {
       setTimeout(() => setFormStatus('idle'), 3000);
     }
@@ -141,11 +141,11 @@ export default function App() {
       {/* Top Navigation Bar */}
       <nav className="fixed top-0 left-0 w-full border-b border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md z-50">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <motion.div 
+          <motion.div
             className="flex items-center gap-3 cursor-pointer group"
             whileHover="hover"
           >
-            <motion.div 
+            <motion.div
               className="relative"
               variants={{
                 hover: { scale: 1.1, rotate: -5 }
@@ -155,17 +155,17 @@ export default function App() {
                 <span className="text-black font-black text-xl">L</span>
               </div>
             </motion.div>
-            
-            <motion.span 
+
+            <motion.span
               className="text-emerald-500 font-signature font-bold text-2xl hidden sm:block leading-none"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               variants={{
                 hover: { x: 5, scale: 1.02 }
               }}
-              transition={{ 
-                duration: 0.8, 
-                delay: 0.3, 
+              transition={{
+                duration: 0.8,
+                delay: 0.3,
                 ease: "easeOut",
                 x: { duration: 0.3 },
                 scale: { duration: 0.3 }
@@ -178,13 +178,13 @@ export default function App() {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href} 
+              <a
+                key={link.name}
+                href={link.href}
                 className={cn(
                   "text-xs uppercase tracking-widest font-bold transition-colors",
-                  activeSection === link.href.replace('#', '') 
-                    ? "text-emerald-500" 
+                  activeSection === link.href.replace('#', '')
+                    ? "text-emerald-500"
                     : "text-zinc-500 hover:text-emerald-500"
                 )}
               >
@@ -194,7 +194,7 @@ export default function App() {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
             className="md:hidden p-2 text-zinc-400 hover:text-emerald-500 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -205,7 +205,7 @@ export default function App() {
         {/* Mobile Menu Overlay */}
         <AnimatePresence>
           {isMenuOpen && (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
@@ -213,14 +213,14 @@ export default function App() {
             >
               <div className="flex flex-col p-6 gap-4">
                 {navLinks.map((link) => (
-                  <a 
-                    key={link.name} 
-                    href={link.href} 
+                  <a
+                    key={link.name}
+                    href={link.href}
                     onClick={() => setIsMenuOpen(false)}
                     className={cn(
                       "text-sm uppercase tracking-widest font-bold transition-colors",
-                      activeSection === link.href.replace('#', '') 
-                        ? "text-emerald-500" 
+                      activeSection === link.href.replace('#', '')
+                        ? "text-emerald-500"
                         : "text-zinc-500 hover:text-emerald-500"
                     )}
                   >
@@ -260,7 +260,7 @@ export default function App() {
               <p className="text-xl lg:text-2xl text-emerald-500 font-medium mb-8">
                 {RESUME_DATA.role}
               </p>
-              
+
               <div className="flex flex-wrap gap-6 mb-12">
                 <div className="flex items-center gap-2 text-sm">
                   <MapPin className="w-4 h-4 text-zinc-500" />
@@ -277,10 +277,10 @@ export default function App() {
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <a 
-                  href={RESUME_DATA.contact.cv} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href={RESUME_DATA.contact.cv}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 px-6 py-3 bg-emerald-500 text-black font-bold rounded-xl hover:bg-emerald-400 transition-all shadow-[0_0_20px_rgba(16,185,129,0.2)]"
                 >
                   <FileText className="w-5 h-5" />
@@ -300,22 +300,22 @@ export default function App() {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="lg:col-span-5 flex justify-center lg:justify-end"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div 
+              <div
                 className="relative group cursor-pointer"
                 onClick={() => setIsImageModalOpen(true)}
               >
                 {/* Animated Glow Background */}
                 <div className="absolute -inset-4 bg-gradient-to-r from-emerald-500 via-blue-500 to-purple-500 rounded-full blur-2xl opacity-20 group-hover:opacity-40 animate-glow-pulse transition duration-1000"></div>
-                
+
                 <div className="relative w-72 h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden border border-zinc-800 bg-zinc-950 shadow-2xl">
-                  <img 
-                    src="/assets/profile.png" 
+                  <img
+                    src="/assets/profile.png"
                     alt={RESUME_DATA.name}
                     className="w-full h-full object-cover grayscale brightness-[1.2] contrast-[1.1] hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
                     referrerPolicy="no-referrer"
@@ -323,7 +323,7 @@ export default function App() {
                 </div>
 
                 {/* Floating Smartphone Icon */}
-                <motion.div 
+                <motion.div
                   className="absolute top-4 right-4 z-30"
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -334,7 +334,7 @@ export default function App() {
                 </motion.div>
 
                 {/* Floating Code Icon */}
-                <motion.div 
+                <motion.div
                   className="absolute bottom-4 left-4 z-30"
                   animate={{ y: [0, 8, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
@@ -349,7 +349,7 @@ export default function App() {
         </header>
 
         {/* About Section */}
-        <motion.section 
+        <motion.section
           id="about"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -374,7 +374,7 @@ export default function App() {
                     {RESUME_DATA.objective}
                   </p>
                 </div>
-                
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 pt-8">
                   <div>
                     <h4 className="text-emerald-500 font-bold uppercase text-sm tracking-widest mb-3">Location</h4>
@@ -391,7 +391,7 @@ export default function App() {
         </motion.section>
 
         {/* Skills Grid */}
-        <motion.section 
+        <motion.section
           id="skills"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -426,7 +426,7 @@ export default function App() {
         </motion.section>
 
         {/* Experience */}
-        <motion.section 
+        <motion.section
           id="experience"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -441,43 +441,65 @@ export default function App() {
             <h2 className="text-4xl font-bold text-zinc-100">Work Experience</h2>
           </div>
 
-          <div className="relative space-y-12">
-            {/* Vertical Line */}
-            <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-emerald-500/30 ml-[7px]" />
-
-            {RESUME_DATA.experience.map((exp, idx) => (
-              <div key={idx} className="relative pl-10 group">
-                {/* Glowing Dot */}
-                <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-emerald-500 border-4 border-black z-10 shadow-[0_0_15px_rgba(16,185,129,0.6)] transition-transform group-hover:scale-125" />
-                
-                <div className="bg-zinc-900/40 border border-zinc-800/50 p-8 rounded-3xl hover:border-emerald-500/30 transition-all duration-500">
-                  <div className="flex flex-col md:flex-row md:items-start justify-between mb-8 gap-4">
-                    <div>
-                      <h3 className="text-2xl font-bold text-zinc-100 mb-1">{exp.role}</h3>
-                      <p className="text-emerald-500 font-bold uppercase tracking-wider text-sm">{exp.company}</p>
-                    </div>
-                    <div className="flex flex-col items-start md:items-end gap-2">
-                      <span className="px-4 py-1.5 bg-emerald-500/10 text-emerald-500 rounded-full text-xs font-bold tracking-wide border border-emerald-500/20">
-                        {exp.period}
-                      </span>
-                      <span className="text-[10px] text-zinc-500 uppercase tracking-[0.2em] font-medium pl-2 md:pl-0">
-                        {exp.location}
-                      </span>
-                    </div>
-                  </div>
-
-                  <ul className="space-y-4">
-                    {exp.points.map((point, i) => (
-                      <li key={i} className="flex gap-4 text-[15px] leading-relaxed text-zinc-400 group/item">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-2 shadow-[0_0_8px_rgba(16,185,129,0.4)]" />
-                        <span className="group-hover/item:text-zinc-300 transition-colors">{point}</span>
-                      </li>
-                    ))}
-                  </ul>
+          {/* Group experiences by company to render LinkedIn-like layout */}
+          {React.useMemo(() => {
+            const map = new Map<string, any>();
+            RESUME_DATA.experience.forEach((e) => {
+              const key = e.company || 'Other';
+              if (!map.has(key)) {
+                map.set(key, { company: e.company, location: e.location, roles: [] });
+              }
+              map.get(key).roles.push({ role: e.role, period: e.period, location: e.location, points: e.points });
+            });
+            return Array.from(map.values());
+          }, []).map((companyBlock, cIdx) => (
+            <div key={cIdx} className="p-6 rounded-2xl bg-zinc-900/30 border border-zinc-800/50 mb-8">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 bg-zinc-950 rounded-md flex items-center justify-center border border-zinc-800">
+                  {/* Placeholder for company logo */}
+                  <span className="text-emerald-500 font-bold">{(companyBlock.company || '').split(' ').map(w => w[0]).slice(0, 2).join('')}</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-zinc-100">{companyBlock.company}</h3>
+                  <p className="text-sm text-zinc-500">{companyBlock.location}</p>
                 </div>
               </div>
-            ))}
-          </div>
+
+              <div className="relative pl-10">
+                {/* company-level vertical line */}
+                <div className="absolute left-6 top-2 bottom-0 w-px bg-emerald-500/30" />
+
+                {companyBlock.roles.map((role: any, rIdx: number) => (
+                  <div key={rIdx} className="relative mb-8">
+                    <div className="absolute left-0 top-2 w-3 h-3 rounded-full bg-emerald-500 border-4 border-black z-10 shadow-[0_0_10px_rgba(16,185,129,0.5)]" />
+
+                    <div className="bg-zinc-900/40 border border-zinc-800/50 p-4 rounded-2xl">
+                      <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                        <div>
+                          <h4 className="text-lg font-bold text-zinc-100">{role.role}</h4>
+                          <p className="text-sm text-zinc-500 mt-1">{role.location}</p>
+                        </div>
+                        <div className="flex flex-col items-start md:items-end gap-2">
+                          <span className="px-3 py-1 bg-emerald-500/10 text-emerald-500 rounded-full text-xs font-bold tracking-wide border border-emerald-500/20">
+                            {role.period}
+                          </span>
+                        </div>
+                      </div>
+
+                      <ul className="mt-3 space-y-2">
+                        {role.points.map((pt: string, i: number) => (
+                          <li key={i} className="flex gap-3 text-sm leading-relaxed text-zinc-400">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-2 shadow-[0_0_8px_rgba(16,185,129,0.4)]" />
+                            <span className="text-zinc-300">{pt}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </motion.section>
 
         {/* Published Apps */}
@@ -492,8 +514,8 @@ export default function App() {
                       Live
                     </span>
                   </div>
-                  <img 
-                    src={app.thumbnail} 
+                  <img
+                    src={app.thumbnail}
                     alt={app.name}
                     className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                     referrerPolicy="no-referrer"
@@ -522,10 +544,10 @@ export default function App() {
                   {/* Store Buttons */}
                   <div className="flex flex-wrap gap-3">
                     {app.links.map((link, i) => (
-                      <a 
-                        key={i} 
-                        href={link.url} 
-                        target="_blank" 
+                      <a
+                        key={i}
+                        href={link.url}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 px-4 py-2 bg-zinc-800 hover:bg-emerald-500 hover:text-black rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all border border-zinc-700/50 hover:border-emerald-400"
                       >
@@ -554,9 +576,9 @@ export default function App() {
                 <h3 className="text-xl font-bold text-zinc-100 mb-2">{project.name}</h3>
                 <p className="text-xs text-emerald-500/70 font-mono mb-4">{project.tech}</p>
                 <p className="text-sm leading-relaxed mb-8 flex-1">{project.description}</p>
-                <a 
-                  href={project.github} 
-                  target="_blank" 
+                <a
+                  href={project.github}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-100 hover:text-emerald-500 transition-colors"
                 >
@@ -588,10 +610,10 @@ export default function App() {
           <Section title="Certifications" icon={Award}>
             <div className="space-y-6">
               {RESUME_DATA.certifications.map((cert, idx) => (
-                <a 
-                  key={idx} 
-                  href={cert.link} 
-                  target="_blank" 
+                <a
+                  key={idx}
+                  href={cert.link}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-4 p-4 rounded-xl bg-zinc-900/50 border border-zinc-800 hover:border-emerald-500/50 transition-all group"
                 >
@@ -617,7 +639,7 @@ export default function App() {
               <p className="text-lg leading-relaxed mb-12">
                 I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
               </p>
-              
+
               <div className="space-y-8">
                 <div className="flex items-center gap-6 group">
                   <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center group-hover:border-emerald-500/50 transition-colors">
@@ -659,20 +681,20 @@ export default function App() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-[10px] font-bold uppercase tracking-widest text-zinc-500 ml-1">Name</label>
-                    <input 
+                    <input
                       required
                       name="name"
-                      type="text" 
+                      type="text"
                       placeholder="John Doe"
                       className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-xl focus:outline-none focus:border-emerald-500/50 text-zinc-100 transition-colors placeholder:text-zinc-700"
                     />
                   </div>
                   <div className="space-y-2">
                     <label className="text-[10px] font-bold uppercase tracking-widest text-zinc-500 ml-1">Email</label>
-                    <input 
+                    <input
                       required
                       name="email"
-                      type="email" 
+                      type="email"
                       placeholder="john@example.com"
                       className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-xl focus:outline-none focus:border-emerald-500/50 text-zinc-100 transition-colors placeholder:text-zinc-700"
                     />
@@ -680,17 +702,17 @@ export default function App() {
                 </div>
                 <div className="space-y-2">
                   <label className="text-[10px] font-bold uppercase tracking-widest text-zinc-500 ml-1">Subject</label>
-                  <input 
+                  <input
                     required
                     name="subject"
-                    type="text" 
+                    type="text"
                     placeholder="Project Inquiry"
                     className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-xl focus:outline-none focus:border-emerald-500/50 text-zinc-100 transition-colors placeholder:text-zinc-700"
                   />
                 </div>
                 <div className="space-y-2">
                   <label className="text-[10px] font-bold uppercase tracking-widest text-zinc-500 ml-1">Message</label>
-                  <textarea 
+                  <textarea
                     required
                     name="message"
                     rows={4}
@@ -698,8 +720,8 @@ export default function App() {
                     className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-xl focus:outline-none focus:border-emerald-500/50 text-zinc-100 transition-colors placeholder:text-zinc-700 resize-none"
                   />
                 </div>
-                
-                <button 
+
+                <button
                   type="submit"
                   disabled={formStatus !== 'idle'}
                   className={cn(
@@ -716,7 +738,7 @@ export default function App() {
                     </>
                   )}
                   {formStatus === 'sending' && (
-                    <motion.div 
+                    <motion.div
                       animate={{ rotate: 360 }}
                       transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
                     >
@@ -781,7 +803,7 @@ export default function App() {
             >
               <X className="w-6 h-6" />
             </motion.button>
-            
+
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -789,8 +811,8 @@ export default function App() {
               className="relative max-w-4xl w-full aspect-square rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
-              <img 
-                src="/assets/profile.png" 
+              <img
+                src="/assets/profile.png"
                 alt={RESUME_DATA.name}
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
